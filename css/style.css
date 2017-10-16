@@ -1,0 +1,342 @@
+body{
+  margin:0;
+  font-size:16px;
+}
+.home{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  background-image:url("https://images.pexels.com/photos/163585/redwood-national-park-california-hdr-landscape-163585.jpeg?w=940&h=650&auto=compress&cs=tinysrgb");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:50% 50%;
+}
+nav{
+  width: 75%;
+  max-width:1200px;
+  align-self: center;
+   -webkit-user-select:none;
+}
+.menu{
+  list-style:none;
+  padding:0;
+  margin:10px;/*потім замінити px*/
+  display:flex;
+  justify-content:space-around;
+  
+}
+.menu li a{
+  display:block;
+  text-decoration:none;
+  text-transform:uppercase;
+  padding:10px;
+  font-weight:bold;
+  font-size:calc(1rem + 1vmin);
+  color:white;
+  position:relative;
+  }
+.menu li a::after{
+  content:"";
+  position:absolute;
+  bottom:-5px;
+  left:0;
+  width:100%;
+  height:1px;
+  background-color:white;
+  transform:scale(0);
+}
+.menu li a:hover::after{
+  transform:scale(1);
+}
+.home-title{
+  color:white;
+  font-size:calc(2rem + 1vmin);
+  margin:15px;
+  text-align:center;
+  text-transform:uppercase;
+  text-shadow:1px 1px 2px rgba(3, 169, 244, 0.5);
+}
+.next-page{
+  color:white;
+  text-decoration:none;
+  transform:rotate(-90deg);
+  align-self:center;
+}
+.menu-button{
+  width:30px;
+  height:30px;
+  display:none;
+  position:fixed;;
+  top:20px;
+  font-size:calc(2rem + 1vmin);
+  justify-content:center;
+  align-items:center;
+  color:white;
+  background-color:rgba(0,0,0,1);
+  border:1px solid white;
+  border-radius:4px;
+  transition:.37s;
+  z-index:30;
+  cursor:pointer;
+}
+
+.home-footer,
+.about-footer,
+.portfolio-footer{
+  display:flex;
+  flex-direction:column;
+  font-size:calc(1.5rem + 1vmin);
+}
+.home-footer__content,
+.about-footer__content,
+.portfolio-footer__content{
+  font-size:1rem;
+  color:white;
+  text-transform:uppercase;
+  text-align:center;
+  margin:5px 15px;
+}
+.about-footer__content,
+.about-footer .next-page{
+  color:black;
+}
+
+/*second page*/
+.about{
+  
+}
+.container{
+  padding:15px;
+  width:75%;
+  max-width:1200px;
+}
+.about-container{
+  box-sizing:border-box;
+  margin:auto;
+}
+.foto-about{
+  max-width:50%;
+  float:left;
+  margin:0 15px 15px 0;
+}
+.about-container h3{
+  text-align:center;
+  font-size:calc(1.5rem + 1vmin);
+  text-transform:uppercase;
+}
+
+/*portfolio stert*/
+#portfolio{
+  display:flex;
+  padding:0 15px 0 15px;
+  flex-direction:column;
+  align-items:center;
+  background-image:url("https://images.pexels.com/photos/4827/nature-forest-trees-fog.jpeg?w=940&h=650&auto=compress&cs=tinysrgb");
+  background-repeat:no-repeat;
+  background-position:50% 50%;
+  background-size:cover;
+  
+}
+#portfolio h3{
+  text-align:center;
+  font-size:calc(1.5rem + 1vmin);
+  text-transform:uppercase;
+}
+.slayder{
+  position:relative;
+  border:1px solid black;
+  margin-bottom:30px;
+  -webkit-user-select:none;
+}
+.controls-bottom{
+  display:flex;
+  justify-content:center;
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
+  padding:0;
+  margin:0;
+  list-style:none;
+  z-index:20;
+}
+.controls-bottom li{
+  width:10px;
+  height:10px;
+  margin:10px calc(.1rem + 1vmin);
+  border:1px solid white;
+  border-radius:50%;
+  cursor:pointer;
+}
+.controls-bottom li.active{
+  width:12px;
+  height:12px;
+  background-color:white;
+}
+.controls{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:absolute;
+  top:0;
+  bottom:0;
+  background-color:rgba(6,6,6,.4);
+  width:calc(1.5rem + 2vmin);
+  max-width:60px;
+  font-size:2rem;
+  font-weight:bold;
+  cursor:pointer;
+  color:white;
+  transition:.3s;
+}
+.controls:hover{
+  background-color:rgba(6,6,6,.8);
+  transition:.3s;
+}
+.controls-left{
+  left:0;
+  border-right:1px solid black;
+}
+.controls-right{
+  right:0;
+  border-left:1px solid black;
+}
+.slayder img{
+  display:block;
+  width:75vw;
+  max-width:1200px;
+}
+/*portfolio end*/
+
+/*contact start*/
+#contact{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:0 15px;
+}
+#contact h3{
+  text-align: center;
+  font-size: calc(1.5rem + 1vmin);
+  text-transform: uppercase;
+}
+.mail-container,
+.phone-container,
+.social-container{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  font-size: calc(1.5rem + 1vmin);
+  color:black;
+  text-decoration:none;
+  text-transform: uppercase;
+  margin-bottom:calc(1.5rem + 1vmin);
+}
+.mail-container h3,
+.phone-container h3,
+.social-container h3{
+  margin:calc(1rem + 1vmin) 0;
+}
+.mail-container a,
+.phone-container a,
+.social-container a{
+  text-decoration:none;
+  color:black;
+  position:relative;
+}
+#contact a::before{
+  content:"";
+  position:absolute;
+  bottom:-10px;
+  width:100%;
+  height:2px;
+  background-color:red;
+  transform:scale(0);
+  transition:.5s;
+}
+
+#contact a:hover::before{
+  display:block;
+  transform:scale(1);
+  transition:.5s;
+}
+
+.social-container__list{
+  display:flex;
+  align-self:stretch;
+  justify-content:space-around;
+}
+
+/*contact end*/
+
+/*footer start*/
+footer{
+  width:75%;
+  margin:auto;
+  border-top:1px solid black;
+  text-align:center;
+  text-transform:uppercase;
+  font-size:calc(1rem + 1vmin);
+  padding:calc(.5rem + 1vmin) 0;
+}
+/* footer end*/
+
+/* media for menu and button */
+@media screen and (max-width:450px){
+  nav{
+    width:100%;
+  }
+  .menu-button{
+    display:flex;
+    
+  }
+  .menu{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    margin:0;
+    background-color: black;
+    z-index: 30;
+    transition:.37s;
+  }
+  .menu.open{
+    left:0;
+    transition:.37s;
+  }
+  .foto-about {
+    max-width: 100%;
+    float:none;
+  }
+}
+/*for container */
+@media screen and (max-width:769px){
+  .container{
+    width:100%;
+  }
+  
+}
+
+@media screen and (max-width:769px) and (orientation:portrait){
+  .slayder{
+    width:100%;
+  }
+  .slayder img{
+    width:100%;
+    height:auto;
+  }
+}
+
+@media screen and (max-width:769px) and (orientation:landscape){
+  .slayder{
+    width:auto;
+  }
+  .slayder img{
+    width:auto;
+    height:90vh;
+  }
+}
