@@ -25,11 +25,19 @@ document.addEventListener("DOMContentLoaded", function(){
   /* слайдер start*/
 
   /* індекс активного фото по замовчуванню*/
-  var indexVisibleFoto = 2;
+  var indexVisibleFoto = 0;
   var img = document.querySelector(".slayder img");
-  var listSrcFoto =         ["https://images.pexels.com/photos/87452/flowers-background-butterflies-beautiful-87452.jpeg?w=940&h=650&auto=compress&cs=tinysrgb",
-                   "https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?h=350&auto=compress&cs=tinysrgb",
-                   "https://images.pexels.com/photos/93052/pexels-photo-93052.jpeg?h=350&auto=compress&cs=tinysrgb","https://images.pexels.com/photos/36762/scarlet-honeyeater-bird-red-feathers.jpg?h=350&auto=compress&cs=tinysrgb","https://images.pexels.com/photos/83427/pexels-photo-83427.jpeg?h=350&auto=compress&cs=tinysrgb","https://images.pexels.com/photos/247599/pexels-photo-247599.jpeg?h=350&auto=compress&cs=tinysrgb","https://images.pexels.com/photos/295168/pexels-photo-295168.jpeg?h=350&auto=compress&cs=tinysrgb","https://images.pexels.com/photos/141978/pexels-photo-141978.jpeg?h=350&auto=compress&cs=tinysrgb","https://images.pexels.com/photos/69457/aso-komezuka-sea-of-clouds-cloud-69457.jpeg?h=350&auto=compress&cs=tinysrgb","https://images.pexels.com/photos/158033/landscape-tree-nature-log-158033.jpeg?h=350&auto=compress&cs=tinysrgb"];
+  
+  var listSrcFoto =["img/foto1.jpg",
+	"img/foto2.jpg",
+	"img/foto3.jpg",
+	"img/foto4.jpg",
+	"img/foto5.jpg",
+	"img/foto6.jpg",
+	"img/foto7.jpg",
+	"img/foto8.jpg",
+	"img/foto9.jpg",
+	"img/foto10.jpg"]
   var listAlt = ["Foto 1","Foto 2","Foto 3","Foto 4","Foto 5","Foto 6","Foto 7","Foto 8","Foto 9","Foto 10"];
   /*створення події для controlsRight*/
   var controlsRight = document.querySelector(".controls-right");
