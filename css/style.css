@@ -27,6 +27,26 @@ body{
 .fa-instagram:before {
   content: "\f16d";
 }
+
+.fade{
+	animation-name:fade;
+	animation-duration:1s;
+	
+	}
+	
+@keyframes fade{
+	from{
+		opacity:.6;
+		-webkit-filter: brightness(0);
+		filter: brightness(0);
+		}
+	to{
+		opacity:1;
+		-webkit-filter: brightness(1);
+		filter: brightness(1);
+		}
+	}
+	
 .home{
   min-height:100vh;
   display:flex;
@@ -194,6 +214,9 @@ nav{
   border-radius:50%;
   cursor:pointer;
 }
+.controls-bottom li:hover{
+  background-color:rgba(255,255,255,0.5);
+}
 .controls-bottom li.active{
   width:12px;
   height:12px;
@@ -231,8 +254,7 @@ nav{
   display:block;
   width:75vw;
   max-width:1200px;
-}
-/*portfolio end*/
+  }
 
 /*contact start*/
 #contact{
