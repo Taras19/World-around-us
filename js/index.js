@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function(){
   var indexVisibleFoto = 0;
   var img = document.querySelector(".slayder img");
   img.addEventListener("animationend",function(){
-	img.classList.remove("fade");
+	 img.classList.remove("fade");
   });
   
   var listSrcFoto =["img/foto1.jpg",
@@ -47,17 +47,17 @@ document.addEventListener("DOMContentLoaded", function(){
   controlsRight.addEventListener("click",function(){
     indexVisibleFoto = ++indexVisibleFoto;
       if(indexVisibleFoto < listSrcFoto.length){
-		img.classList.add("fade");
         img.src = listSrcFoto[indexVisibleFoto];
         img.alt = listAlt[indexVisibleFoto];
+        img.classList.add("fade");
         controlsBottom.children[indexVisibleFoto - 1].classList.remove("active");
         controlsBottom.children[indexVisibleFoto].classList.add("active");
       }
       else{
         indexVisibleFoto = 0;
-		img.classList.add("fade");
         img.src = listSrcFoto[indexVisibleFoto];
         img.alt = listAlt[indexVisibleFoto];
+        img.classList.add("fade");
         controlsBottom.children[listSrcFoto.length - 1].classList.remove("active");
         controlsBottom.children[indexVisibleFoto].classList.add("active");
       }
@@ -68,17 +68,17 @@ document.addEventListener("DOMContentLoaded", function(){
     controlsLeft.addEventListener("click",function(){
       indexVisibleFoto=--indexVisibleFoto;
       if(indexVisibleFoto >= 0){
-		img.classList.add("fade");
         img.src = listSrcFoto[indexVisibleFoto];
         img.alt = listAlt[indexVisibleFoto];
+        img.classList.add("fade");
         controlsBottom.children[indexVisibleFoto + 1].classList.remove("active");
         controlsBottom.children[indexVisibleFoto].classList.add("active");
       }
       else{
         indexVisibleFoto = listSrcFoto.length - 1;
-		img.classList.add("fade");
         img.src = listSrcFoto[indexVisibleFoto];
         img.alt = listAlt[indexVisibleFoto];
+        img.classList.add("fade");
         controlsBottom.children[0].classList.remove("active");
         controlsBottom.children[indexVisibleFoto].classList.add("active");
       }
@@ -102,9 +102,9 @@ document.addEventListener("DOMContentLoaded", function(){
         controlsBottom.children[indexVisibleFoto].classList.remove("active");
         controlsBottom.children[this.getAttribute("data-index")].classList.add("active");
         indexVisibleFoto = this.getAttribute("data-index");
-		img.classList.add("fade");
         img.src = listSrcFoto[indexVisibleFoto];
         img.alt = listAlt[indexVisibleFoto];
+        img.classList.add("fade");
       });
     }
 	/* слайдер end */
