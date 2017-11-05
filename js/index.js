@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", function(){
   menuButton.addEventListener("click",function(){
     menu.classList.toggle("open");
     if(menu.classList.contains("open")){
-      menuButton.style.left = menu.offsetWidth+10+"px";
+      menuButton.classList.add("menu-button__open");
       menuButton.innerHTML = '&times;';
     }
     else{
-      menuButton.style.left = 20+"px";
+      menuButton.classList.remove("menu-button__open");
       menuButton.innerHTML = '&equiv;';
     }
   });
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function(){
   var menu = document.querySelector(".menu");
   menu.addEventListener("click",function(event){
     if(event.target.hasAttribute("href")){
-      menuButton.style.left=20+"px";
+      menuButton.classList.remove("menu-button__open");
       menuButton.innerHTML='&equiv;';
       menu.classList.remove("open");
     }
@@ -31,17 +31,26 @@ document.addEventListener("DOMContentLoaded", function(){
 	 img.classList.remove("fade");
   });
   
-  var listSrcFoto =["img/foto1.jpg",
-	"img/foto2.jpg",
-	"img/foto3.jpg",
-	"img/foto4.jpg",
-	"img/foto5.jpg",
-	"img/foto6.jpg",
-	"img/foto7.jpg",
-	"img/foto8.jpg",
-	"img/foto9.jpg",
-	"img/foto10.jpg"];
-  var listAlt = ["Foto 1","Foto 2","Foto 3","Foto 4","Foto 5","Foto 6","Foto 7","Foto 8","Foto 9","Foto 10"];
+  var listSrcFoto =["img/flowers.jpg",
+	"img/butterflies.jpg",
+	"img/field.jpg",
+	"img/bird.jpg",
+	"img/leaf.jpg",
+	"img/mountains.jpg",
+	"img/river.jpg",
+	"img/green-meadow.jpg",
+	"img/green-mountains.jpg",
+	"img/single-tree.jpg"];
+  var listAlt = [
+    "Flowers background butterflies beautiful",
+    "Butterflies background flowers beautiful",
+    "Field with flowers","Bird on a Branch",
+    "Leaf with drops of dew",
+    "Green Mountain on a sunny day",
+    "River in the forest",
+    "Green meadow with a stream",
+    "Green Mountain on a sunny day",
+    "A single tree on a hill"];
   /*створення події для controlsRight*/
   var controlsRight = document.querySelector(".controls-right");
   controlsRight.addEventListener("click",function(){
