@@ -1,23 +1,23 @@
 
-document.addEventListener("DOMContentLoaded", function(){
-  var menuButton = document.querySelector(".menu-button");
-  menuButton.addEventListener("click",function(){
+document.addEventListener("DOMContentLoaded", function() {
+  let menuButton = document.querySelector(".menu-button");
+  menuButton.addEventListener("click",function() {
     menu.classList.toggle("open");
     if(menu.classList.contains("open")){
       menuButton.classList.add("menu-button__open");
-      menuButton.innerHTML = '&times;';
+      menuButton.innerHTML = "&times;";
     }
     else{
       menuButton.classList.remove("menu-button__open");
-      menuButton.innerHTML = '&equiv;';
+      menuButton.innerHTML = "&equiv;";
     }
   });
   /* зміна положення меню та button.innerHTML при виборі пункту     меню */
-  var menu = document.querySelector(".menu");
+  let menu = document.querySelector(".menu");
   menu.addEventListener("click",function(event){
     if(event.target.hasAttribute("href")){
       menuButton.classList.remove("menu-button__open");
-      menuButton.innerHTML='&equiv;';
+      menuButton.innerHTML="&equiv;";
       menu.classList.remove("open");
     }
   });
@@ -25,36 +25,36 @@ document.addEventListener("DOMContentLoaded", function(){
   /* слайдер start*/
 
   /* індекс активного фото по замовчуванню*/
-  var indexVisibleFoto = 0;
-  var img = document.querySelector(".slayder img");
+  let indexVisibleFoto = 0;
+  let img = document.querySelector(".slayder img");
   img.addEventListener("animationend",function(){
-	 img.classList.remove("fade");
+	    img.classList.remove("fade");
   });
   
-  var listSrcFoto =["img/flowers.jpg",
-	"img/butterflies.jpg",
-	"img/field.jpg",
-	"img/bird.jpg",
-	"img/leaf.jpg",
-	"img/mountains.jpg",
-	"img/river.jpg",
-	"img/green-meadow.jpg",
-	"img/green-mountains.jpg",
-	"img/single-tree.jpg"];
-  var listAlt = [
-    "Flowers background butterflies beautiful",
-    "Butterflies background flowers beautiful",
-    "Field with flowers","Bird on a Branch",
-    "Leaf with drops of dew",
-    "Green Mountain on a sunny day",
-    "River in the forest",
-    "Green meadow with a stream",
-    "Green Mountain on a sunny day",
-    "A single tree on a hill"];
+  let listSrcFoto =["img/flowers.jpg",
+      "img/butterflies.jpg",
+	    "img/field.jpg",
+	    "img/bird.jpg",
+	    "img/leaf.jpg",
+	    "img/mountains.jpg",
+	    "img/river.jpg",
+	    "img/green-meadow.jpg",
+	    "img/green-mountains.jpg",
+	    "img/single-tree.jpg"];
+  let listAlt = [
+      "Flowers background butterflies beautiful",
+      "Butterflies background flowers beautiful",
+      "Field with flowers","Bird on a Branch",
+      "Leaf with drops of dew",
+      "Green Mountain on a sunny day",
+      "River in the forest",
+      "Green meadow with a stream",
+      "Green Mountain on a sunny day",
+      "A single tree on a hill"];
   /*створення події для controlsRight*/
-  var controlsRight = document.querySelector(".controls-right");
+  let controlsRight = document.querySelector(".controls-right");
   controlsRight.addEventListener("click",function(){
-    indexVisibleFoto = ++indexVisibleFoto;
+      ++indexVisibleFoto;
       if(indexVisibleFoto < listSrcFoto.length){
         img.src = listSrcFoto[indexVisibleFoto];
         img.alt = listAlt[indexVisibleFoto];
@@ -73,9 +73,9 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 
     /*створення події для controlsLeft*/
-    var controlsLeft = document.querySelector(".controls-left");
+    let controlsLeft = document.querySelector(".controls-left");
     controlsLeft.addEventListener("click",function(){
-      indexVisibleFoto=--indexVisibleFoto;
+      --indexVisibleFoto;
       if(indexVisibleFoto >= 0){
         img.src = listSrcFoto[indexVisibleFoto];
         img.alt = listAlt[indexVisibleFoto];
@@ -93,15 +93,15 @@ document.addEventListener("DOMContentLoaded", function(){
       }
     });
     /* створення події при завантаженні для ul>li слайдер*/
-    var controlsBottom = document.querySelector(".controls-bottom");
+    let controlsBottom = document.querySelector(".controls-bottom");
     /*завантаження активного фото по замовчуванню*/
     img.src = listSrcFoto[indexVisibleFoto];
     img.alt = listAlt[indexVisibleFoto];
     /* створення елементу*/
-    var elementLi = document.createElement("li");
-    for(var i = 0; i < listSrcFoto.length; i++){
+    let elementLi = document.createElement("li");
+    for (let i = 0; i < listSrcFoto.length; i++){
       controlsBottom.appendChild(elementLi.cloneNode(true));
-      if(i == indexVisibleFoto){
+      if(i === indexVisibleFoto){
         controlsBottom.children[i].classList.add("active");
       }
       /* присвоєння індексу*/
