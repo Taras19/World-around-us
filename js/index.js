@@ -31,16 +31,17 @@ document.addEventListener("DOMContentLoaded", function() {
 	    img.classList.remove("fade");
   });
   
-  let listSrcFoto =["img/flowers.jpg",
+  let listSrcFoto =[
+      "img/flowers.jpg",
       "img/butterflies.jpg",
-	    "img/field.jpg",
-	    "img/bird.jpg",
-	    "img/leaf.jpg",
-	    "img/mountains.jpg",
-	    "img/river.jpg",
-	    "img/green-meadow.jpg",
-	    "img/green-mountains.jpg",
-	    "img/single-tree.jpg"];
+      "img/field.jpg",
+      "img/bird.jpg",
+      "img/leaf.jpg",
+      "img/mountains.jpg",
+      "img/river.jpg",
+      "img/green-meadow.jpg",
+      "img/green-mountains.jpg",
+      "img/single-tree.jpg"];
   let listAlt = [
       "Flowers background butterflies beautiful",
       "Butterflies background flowers beautiful",
