@@ -153,7 +153,7 @@ nav{
   margin:auto;
 }
 .foto-about{
-  max-width:50%;
+  width:50%;
   float:left;
   margin:0 15px 15px 0;
 }
@@ -352,7 +352,7 @@ footer{
     transition:.37s;
   }
   .foto-about {
-    max-width: 100%;
+    width: 100%;
     float:none;
   }
 }
